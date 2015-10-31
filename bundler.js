@@ -16,10 +16,10 @@ bundlers.forEach(function (b, i) {
   ;
 
   bundlers[i] = b;
-  bundle(b, function () {});
+  bundle(b);
 });
 
-function bundle (b, done) {
+function bundle (b) {
    b
     .bundle()
     .pipe(process.stdout)
